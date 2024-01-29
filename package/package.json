@@ -1,21 +1,20 @@
 {
-  "name": "package-name",
+  "name": "satori-astro",
   "version": "0.0.0",
-  "description": "TODO:",
+  "description": "Astro integration and utilities to help you generate OpenGraph images using satori.",
   "author": {
-    "email": "TODO:",
-    "name": "TODO:",
-    "url": "TODO:"
+    "email": "contact@florian-lefebvre.dev",
+    "name": "Florian Lefebvre",
+    "url": "https://florian-lefebvre.dev"
   },
   "license": "MIT",
   "keywords": [
     "astro-integration",
     "astro-component",
     "withastro",
-    "astro",
-    "TODO:"
+    "astro"
   ],
-  "homepage": "TODO:",
+  "homepage": "https://github.com/florian-lefebvre/satori-astro",
   "publishConfig": {
     "access": "public"
   },
@@ -29,6 +28,6 @@
     "astro": "^4.0.0"
   },
   "dependencies": {
-    "astro-integration-kit": "^0.0.2"
+    "astro-integration-kit": "^0.0.9"
   }
 }

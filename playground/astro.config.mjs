@@ -1,8 +1,8 @@
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
-import packageName from "package-name";
+import satoriAstro from "satori-astro";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind(), packageName()],
+	integrations: [tailwind(), satoriAstro()],
 });

@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.2.6",
-    "package-name": "workspace:*",
+    "satori-astro": "workspace:*",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {

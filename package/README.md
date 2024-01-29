@@ -1,27 +1,24 @@
-# `package-name`
+# `satori-astro`
 
-This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) that TODO:description
+This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) and utilities
+to help you generate OpenGraph images using [satori](https://github.com/vercel/satori).
 
 ## Usage
-
-### Prerequisites
-
-TODO:
 
 ### Installation
 
 Install the integration **automatically** using the Astro CLI:
 
 ```bash
-pnpm astro add package-name
+pnpm astro add satori-astro
 ```
 
 ```bash
-npm astro add package-name
+npm astro add satori-astro
 ```
 
 ```bash
-yarn astro add package-name
+yarn astro add satori-astro
 ```
 
 Or install it **manually**:
@@ -29,21 +26,21 @@ Or install it **manually**:
 1. Install the required dependencies
 
 ```bash
-pnpm add package-name
+pnpm add satori-astro
 ```
 
 ```bash
-npm install package-name
+npm install satori-astro
 ```
 
 ```bash
-yarn add package-name
+yarn add satori-astro
 ```
 
 2. Add the integration to your astro config
 
 ```diff
-+import integration from "package-name";
++import integration from "satori-astro";
 
 export default defineConfig({
   integrations: [
@@ -79,8 +76,4 @@ You can now edit files in `package`. Please note that making changes to those fi
 
 ## Licensing
 
-[MIT Licensed](https://github.com/TODO:/blob/main/LICENSE). Made with ❤️ by [TODO:](https://github.com/TODO:).
-
-## Acknowledgements
-
-TODO:
+[MIT Licensed](https://github.com/florian-lefebvre/satori-astro/blob/main/LICENSE). Made with ❤️ by [Florian Lefebvre](https://github.com/florian-lefebvre).
