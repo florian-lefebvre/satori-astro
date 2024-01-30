@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
+    "@resvg/resvg-js": "^2.6.0",
     "astro": "^4.2.6",
     "satori-astro": "workspace:*",
     "satori-html": "^0.3.2",

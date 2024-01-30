@@ -8,13 +8,13 @@ export const GET: APIRoute = async () => {
 	);
 	const fontData: ArrayBuffer = await fontFile.arrayBuffer();
 
-	return await satoriAstroOG({
-		template: html`<div style="display: flex; justify-items: center; align-items: center; background-color: red; font-family: Inter; height: 100%;">
-                            <h1 style="color: blue;">TEST</h1>
+	const image = await satoriAstroOG({
+		template: html`<div style="display: flex; justify-items: center; align-items: center; background-color: yellow; font-family: Inter; height: 100%;">
+                            <h1 style="color: green;">Test toImage</h1>
                         </div>`,
 		width: 1920,
 		height: 1080,
-	}).toResponse({
+	}).toImage({
 		satori: {
 			fonts: [
 				{
@@ -23,6 +23,14 @@ export const GET: APIRoute = async () => {
 					style: "normal",
 				},
 			],
+		},
+	});
+
+	return new Response(image, {
+		headers: {
+			"Content-Type": "image/png",
+			"Content-Length": image.length.toString(),
+			"Cache-Control": "public, max-age=31536000, immutable",
 		},
 	});
 };

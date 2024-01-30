@@ -5,7 +5,7 @@
 - [x] Add a LICENSE.md at the root
 - [x] Have gh cli installed
 - [x] Work on the integration logic
-- [ ] Playground
+- [x] Playground
 - [ ] Work on docs
   - [ ] JSDoc
   - [ ] Package README
