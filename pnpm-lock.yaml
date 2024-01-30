@@ -41,6 +41,9 @@ importers:
       astro:
         specifier: ^4.2.6
         version: 4.2.6(@types/node@20.11.10)(typescript@5.3.3)
+      astro-carton:
+        specifier: ^0.1.0
+        version: 0.1.0(astro@4.2.6)
       satori-astro:
         specifier: workspace:*
         version: link:../package
@@ -1547,6 +1550,16 @@ packages:
     resolution: {integrity: sha512-3CYzex9M9FGQjCGMGyi6/31c8GJbgb0qGyrx5HWxPd0aCwh4cB2YjMb2Xf9UuoogrMrlO9cTqnB5rI5GHZTcUA==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /astro-carton@0.1.0(astro@4.2.6):
+    resolution: {integrity: sha512-EbNL7Otrwyn6GBLvaZH3MYs4WVF4XKmsdJiihMruI3Bwr9xSB4qxDNW6aJvGjwAxDkiOEametBNtqZSb0rWYQA==}
+    peerDependencies:
+      astro: '4'
+    dependencies:
+      '@astrojs/compiler': 2.5.1
+      astro: 4.2.6(@types/node@20.11.10)(typescript@5.3.3)
+      esbuild: 0.19.11
+    dev: false
 
   /astro-integration-kit@0.0.9(astro@4.1.2):
     resolution: {integrity: sha512-ke9pFCX66TUJy03K4u6xqebAo0CWewZkMyG3nFeDXRg5trT3oYPQLU2MRnvPu1Hw3q/i4L3TymkIw88T+TV2ow==}

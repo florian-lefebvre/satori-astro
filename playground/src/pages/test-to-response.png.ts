@@ -1,6 +1,9 @@
 import type { APIRoute } from "astro";
 import { satoriAstroOG } from "satori-astro";
 import { html } from "satori-html";
+// import "astro-carton";
+// import { AstroCarton } from "astro-carton/runtime";
+// import OG from "../components/OG.astro";
 
 export const GET: APIRoute = async () => {
 	const fontFile = await fetch(
@@ -25,4 +28,20 @@ export const GET: APIRoute = async () => {
 			],
 		},
 	});
+	// const carton = new AstroCarton();
+	// return await satoriAstroOG({
+	// 	template: html(await carton.renderToString(OG)),
+	// 	width: 1920,
+	// 	height: 1080,
+	// }).toResponse({
+	// 	satori: {
+	// 		fonts: [
+	// 			{
+	// 				name: "Inter Latin",
+	// 				data: fontData,
+	// 				style: "normal",
+	// 			},
+	// 		],
+	// 	},
+	// });
 };

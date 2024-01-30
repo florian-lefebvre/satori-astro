@@ -1,7 +1,7 @@
+import { Resvg } from "@resvg/resvg-js";
 import type { APIRoute } from "astro";
 import { satoriAstroOG } from "satori-astro";
 import { html } from "satori-html";
-import { Resvg } from "@resvg/resvg-js";
 
 export const GET: APIRoute = async () => {
 	const fontFile = await fetch(
@@ -9,7 +9,7 @@ export const GET: APIRoute = async () => {
 	);
 	const fontData: ArrayBuffer = await fontFile.arrayBuffer();
 
-		const width = 1920
+	const width = 1920;
 
 	const svg = await satoriAstroOG({
 		template: html`<div style="display: flex; justify-items: center; align-items: center; background-color: brown; font-family: Inter; height: 100%;">
@@ -18,13 +18,13 @@ export const GET: APIRoute = async () => {
 		width,
 		height: 1080,
 	}).toSvg({
-			fonts: [
-				{
-					name: "Inter Latin",
-					data: fontData,
-					style: "normal",
-				},
-			],
+		fonts: [
+			{
+				name: "Inter Latin",
+				data: fontData,
+				style: "normal",
+			},
+		],
 	});
 
 	const image = new Resvg(svg, {

@@ -2,9 +2,9 @@ import { Resvg } from "@resvg/resvg-js";
 import satori from "satori";
 import type {
 	SatoriAstroOGOptions,
-	ToSvgOptions,
 	ToImageOptions,
 	ToResponseOptions,
+	ToSvgOptions,
 } from "./types.js";
 
 export const satoriAstroOG = ({
