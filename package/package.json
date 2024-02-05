@@ -30,6 +30,6 @@
   "dependencies": {
     "@resvg/resvg-js": "^2.6.0",
     "astro-integration-kit": "^0.0.9",
-    "satori": "^0.10.11"
+    "satori": "^0.10.13"
   }
 }
