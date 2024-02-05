@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@resvg/resvg-js": "^2.6.0",
-    "astro-integration-kit": "^0.0.9",
+    "astro-integration-kit": "^0.0.12",
     "satori": "^0.10.11"
   }
 }
