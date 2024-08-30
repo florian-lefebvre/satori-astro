@@ -1,37 +1,26 @@
 ---
-const title = "satori-astro API examples"
+import MainLayout from '../layouts/MainLayout.astro';
+import ImageSection from '../components/ImageSection.astro';
+
+const title = "satori-astro API examples";
 ---
 
-<!doctype html>
-<html lang="en" class="bg-gray-900 text-gray-100">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="min-h-screen">
-		<main class="container mx-auto px-4 py-8 max-w-4xl">
-			<h1 class="text-4xl font-bold mb-8 text-center">{title}</h1>
-
-			<div class="space-y-8">
-				<section class="bg-gray-800 rounded-lg p-6 shadow-lg">
-					<h2 class="text-2xl font-semibold mb-4">Test toImage</h2>
-					<img src="/test-to-image.png" alt="Test to Image" class="w-full h-auto rounded-lg" />
-				</section>
-
-				<section class="bg-gray-800 rounded-lg p-6 shadow-lg">
-					<h2 class="text-2xl font-semibold mb-4">Test toResponse</h2>
-					<img src="/test-to-response.png" alt="Test to Response" class="w-full h-auto rounded-lg" />
-				</section>
-
-				<section class="bg-gray-800 rounded-lg p-6 shadow-lg">
-					<h2 class="text-2xl font-semibold mb-4">Test toSVG</h2>
-					<img src="/test-to-svg.svg" alt="Test to SVG" class="w-full h-auto rounded-lg" />
-				</section>
-			</div>
-		</main>
-	</body>
-</html>
+<MainLayout title={title}>
+	<div class="space-y-8">
+		<ImageSection 
+			title="Test toImage" 
+			imageSrc="/test-to-image.png" 
+			altText="Test to Image" 
+		/>
+		<ImageSection 
+			title="Test toResponse" 
+			imageSrc="/test-to-response.png" 
+			altText="Test to Response" 
+		/>
+		<ImageSection 
+			title="Test toSVG" 
+			imageSrc="/test-to-svg.svg" 
+			altText="Test to SVG" 
+		/>
+	</div>
+</MainLayout>
