@@ -1,4 +1,4 @@
-import { Resvg } from "@resvg/resvg-js";
+import { Resvg, initWasm } from "@resvg/resvg-wasm";
 import satori from "satori";
 import type {
 	SatoriAstroOGOptions,
@@ -25,6 +25,7 @@ export const satoriAstroOG = ({
 					? _resvgOptions({ width, height })
 					: _resvgOptions;
 
+			await initWasm(undefined as any).catch(() => {});
 			return new Resvg(await this.toSvg(satoriOptions), {
 				fitTo: { mode: "width", value: width },
 				...resvgOptions,
