@@ -28,8 +28,8 @@
     "astro": "^4.0.0"
   },
   "dependencies": {
-    "@resvg/resvg-wasm": "^2.6.2",
     "astro-integration-kit": "^0.0.9",
-    "satori": "^0.10.11"
+    "satori": "^0.10.11",
+    "sharp": "^0.33.5"
   }
 }

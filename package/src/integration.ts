@@ -8,7 +8,7 @@ export const integration = defineIntegration({
 				updateConfig({
 					vite: {
 						optimizeDeps: {
-							exclude: ["@resvg/resvg-js"],
+							exclude: ["sharp"],
 						},
 					},
 				});
