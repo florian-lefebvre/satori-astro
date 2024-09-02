@@ -1,0 +1,8 @@
+---
+const { title, imageSrc, altText } = Astro.props;
+---
+
+<section class="bg-gray-800 rounded-lg p-6 shadow-lg">
+	<h2 class="text-2xl font-semibold mb-4">{title}</h2>
+	<img src={imageSrc} alt={altText} class="w-full h-auto rounded-lg" />
+</section>
