@@ -6,9 +6,7 @@ This is an helper function for [Astro](https://astro.build/en) to help you gener
 
 ### Installation
 
-Install the package **manually**:
-
-Install the required dependencies
+Install the required dependencies:
 
 ```bash
 pnpm add satori-astro sharp
