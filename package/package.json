@@ -25,11 +25,11 @@
   "scripts": {},
   "type": "module",
   "peerDependencies": {
-    "astro": "^4.0.0"
+    "astro": "^4.0.0",
+    "sharp": "^0.33.3"
   },
   "dependencies": {
     "astro-integration-kit": "^0.0.9",
-    "satori": "^0.10.11",
-    "sharp": "^0.33.5"
+    "satori": "^0.10.11"
   }
 }

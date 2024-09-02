@@ -16,10 +16,18 @@ export const satoriAstroOG = ({
 		async toSvg(options: ToSvgOptions) {
 			return await satori(template, { width, height, ...options });
 		},
-		async toImage({ satori: satoriOptions }: ToImageOptions) {
+		async toImage({
+			satori: satoriOptions,
+			sharp: _sharpOptions,
+		}: ToImageOptions) {
+			const sharpOptions =
+				typeof _sharpOptions === "function"
+					? _sharpOptions({ width, height })
+					: _sharpOptions;
+
 			const svgString = await this.toSvg(satoriOptions);
 
-			const pngBuffer = await sharp(Buffer.from(svgString))
+			const pngBuffer = await sharp(Buffer.from(svgString), sharpOptions)
 				.resize(width, height)
 				.png()
 				.toBuffer();

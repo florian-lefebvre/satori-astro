@@ -1,9 +1,8 @@
 import type satori from "satori";
-import type Sharp from "sharp";
+import type { SharpOptions } from "sharp";
 
 type SatoriParameters = Parameters<typeof satori>;
 type SatoriOptions = SatoriParameters[1];
-type sharpOptions = Parameters<typeof Sharp>;
 
 export type SatoriAstroOGOptions = {
 	/**
@@ -42,8 +41,8 @@ export type ToImageOptions = {
 	 * accepts width and height as arguments.
 	 */
 	sharp?:
-		| sharpOptions
-		| ((params: { width: number; height: number }) => sharpOptions);
+		| SharpOptions
+		| ((params: { width: number; height: number }) => SharpOptions);
 };
 
 export type ToResponseOptions = ToImageOptions & {
