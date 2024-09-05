@@ -1,61 +1,26 @@
 # `satori-astro`
 
-This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) and utilities
-to help you generate OpenGraph images using [satori](https://github.com/vercel/satori).
+This is an helper function for [Astro](https://astro.build/en) to help you generate OpenGraph images using [satori](https://github.com/vercel/satori) and [sharp](https://github.com/lovell/sharp).
 
 ## Usage
 
 ### Installation
 
-Install the integration **automatically** using the Astro CLI:
+Install the required dependencies:
 
 ```bash
-pnpm astro add satori-astro
-```
-
-```bash
-npm astro add satori-astro
+pnpm add satori-astro sharp
 ```
 
 ```bash
-yarn astro add satori-astro
-```
-
-Or install it **manually**:
-
-1. Install the required dependencies
-
-```bash
-pnpm add satori-astro
+npm install satori-astro sharp
 ```
 
 ```bash
-npm install satori-astro
+yarn add satori-astro sharp
 ```
 
-```bash
-yarn add satori-astro
-```
-
-2. Add the integration to your astro config
-
-```diff
-+import satoriAstro from "satori-astro";
-
-export default defineConfig({
-  integrations: [
-+    satoriAstro(),
-  ],
-});
-```
-
-The integration itself is not configurable.
-
-### Utilities
-
-`satori-astro` exports a few utilities built on top of satori and resvg.
-
-#### `satoriAstroOG`
+### `satoriAstroOG`
 
 `satoriAstroOG` can be used in 3 ways, depending on the level of abstraction you need. We recommend going with `toResponse` by default. For example
 

@@ -1,5 +1,5 @@
-import { Resvg, initWasm } from "@resvg/resvg-wasm";
 import satori from "satori";
+import sharp from "sharp";
 import type {
 	SatoriAstroOGOptions,
 	ToImageOptions,
@@ -18,20 +18,21 @@ export const satoriAstroOG = ({
 		},
 		async toImage({
 			satori: satoriOptions,
-			resvg: _resvgOptions,
+			sharp: _sharpOptions,
 		}: ToImageOptions) {
-			const resvgOptions =
-				typeof _resvgOptions === "function"
-					? _resvgOptions({ width, height })
-					: _resvgOptions;
+			const sharpOptions =
+				typeof _sharpOptions === "function"
+					? _sharpOptions({ width, height })
+					: _sharpOptions;
 
-			await initWasm(undefined as any).catch(() => {});
-			return new Resvg(await this.toSvg(satoriOptions), {
-				fitTo: { mode: "width", value: width },
-				...resvgOptions,
-			})
-				.render()
-				.asPng();
+			const svgString = await this.toSvg(satoriOptions);
+
+			const pngBuffer = await sharp(Buffer.from(svgString), sharpOptions)
+				.resize(width, height)
+				.png()
+				.toBuffer();
+
+			return pngBuffer;
 		},
 		async toResponse({ response: init, ...rest }: ToResponseOptions) {
 			const image = await this.toImage(rest);

@@ -1,9 +1,8 @@
-import type { Resvg } from "@resvg/resvg-js";
 import type satori from "satori";
+import type { SharpOptions } from "sharp";
 
 type SatoriParameters = Parameters<typeof satori>;
 type SatoriOptions = SatoriParameters[1];
-type ResvgOptions = NonNullable<ConstructorParameters<typeof Resvg>[1]>;
 
 export type SatoriAstroOGOptions = {
 	/**
@@ -28,7 +27,7 @@ export type SatoriAstroOGOptions = {
 export type ToSvgOptions = Omit<SatoriOptions, "width" | "height">;
 
 /**
- * Options forwarded to satori and resvg.
+ * Options forwarded to satori and sharp.
  */
 export type ToImageOptions = {
 	/**
@@ -37,13 +36,13 @@ export type ToImageOptions = {
 	 */
 	satori: ToSvgOptions;
 	/**
-	 * Options forwarded to resvg. If you want to set another size than the
+	 * Options forwarded to sharp. If you want to set another size than the
 	 * one used by satori (which is unlikely), you can pass a function that
 	 * accepts width and height as arguments.
 	 */
-	resvg?:
-		| ResvgOptions
-		| ((params: { width: number; height: number }) => ResvgOptions);
+	sharp?:
+		| SharpOptions
+		| ((params: { width: number; height: number }) => SharpOptions);
 };
 
 export type ToResponseOptions = ToImageOptions & {

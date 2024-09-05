@@ -1,7 +1,6 @@
 # satori-astro
 
-`satori-astro` is an integration and some utilities to help you generate OpenGraph images
-using [satori](https://github.com/vercel/satori).
+`satori-astro` is an helper function for [Astro](https://astro.build/en) to help you generate OpenGraph images using [satori](https://github.com/vercel/satori) and [sharp](https://github.com/lovell/sharp).
 
 To see how to get started, check out the [package README](./package/README.md)
 
