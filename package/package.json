@@ -1,6 +1,6 @@
 {
   "name": "satori-astro",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Astro integration and utilities to help you generate OpenGraph images using satori.",
   "author": {
     "email": "contact@florian-lefebvre.dev",

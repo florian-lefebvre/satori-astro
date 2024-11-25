@@ -1,5 +1,11 @@
 # satori-astro
 
+## 0.3.0
+
+### Minor Changes
+
+- c19b4c7: Adds support for Astro 5 beta
+
 ## 0.2.0
 
 ### Minor Changes
