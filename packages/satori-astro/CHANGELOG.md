@@ -1,5 +1,11 @@
 # satori-astro
 
+## 0.3.1
+
+### Patch Changes
+
+- [#15](https://github.com/florian-lefebvre/satori-astro/pull/15) [`8c98769`](https://github.com/florian-lefebvre/satori-astro/commit/8c98769438df38e8f1a01a53118883d942326def) Thanks [@florian-lefebvre](https://github.com/florian-lefebvre)! - Bumps version, no code change
+
 ## 0.3.0
 
 ### Minor Changes
