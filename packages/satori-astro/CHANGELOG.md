@@ -1,5 +1,11 @@
 # satori-astro
 
+## 0.3.2
+
+### Patch Changes
+
+- [#33](https://github.com/florian-lefebvre/satori-astro/pull/33) [`687bc9d`](https://github.com/florian-lefebvre/satori-astro/commit/687bc9d1b66530db34b20665219d6e438907baad) Thanks [@kylejrp](https://github.com/kylejrp)! - Fixes `sharp` peer dependency version range
+
 ## 0.3.1
 
 ### Patch Changes
@@ -19,7 +25,6 @@
 - 0419935: Updates how `satori-astro` works under the hood. This is a breaking change
 
   It no longer relies on `resvg` but uses `sharp` instead:
-
   1. The integration is removed, the `satoriAstroOG` helper can be used alone:
 
   ```diff
