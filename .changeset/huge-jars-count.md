@@ -2,4 +2,4 @@
 "satori-astro": patch
 ---
 
-Fix `sharp` peer dependency version range
+Fixes `sharp` peer dependency version range
