@@ -1,5 +1,11 @@
 # satori-astro
 
+## 0.3.3
+
+### Patch Changes
+
+- [#36](https://github.com/florian-lefebvre/satori-astro/pull/36) [`04650fc`](https://github.com/florian-lefebvre/satori-astro/commit/04650fc25de7fef42e4062a616d8dcd61068801e) Thanks [@florian-lefebvre](https://github.com/florian-lefebvre)! - Builds source files instead of shipping them directly
+
 ## 0.3.2
 
 ### Patch Changes
