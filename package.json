@@ -6,7 +6,9 @@
 		"node": ">=24.12.0"
 	},
 	"scripts": {
+		"package:dev": "pnpm --filter satori-astro dev",
 		"playground:dev": "pnpm --filter playground dev",
+		"dev": "pnpm --stream -r -parallel dev",
 		"changeset": "changeset",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
