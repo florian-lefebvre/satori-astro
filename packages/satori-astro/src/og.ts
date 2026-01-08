@@ -37,7 +37,7 @@ export const satoriAstroOG = ({
 		async toResponse({ response: init, ...rest }: ToResponseOptions) {
 			const image = await this.toImage(rest);
 
-			return new Response(image, {
+			return new Response(image as Uint8Array<ArrayBuffer>, {
 				...init,
 				headers: {
 					"Content-Type": "image/png",

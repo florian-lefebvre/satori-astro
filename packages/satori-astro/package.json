@@ -1,13 +1,23 @@
 {
 	"name": "satori-astro",
 	"version": "0.3.2",
-	"description": "Astro integration and utilities to help you generate OpenGraph images using satori.",
+	"description": "Astro utilities to help you generate OpenGraph images using satori.",
 	"type": "module",
 	"sideEffects": false,
 	"exports": {
-		".": "./src/index.ts"
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
 	},
-	"scripts": {},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "tsup --watch",
+		"build": "tsup",
+		"prepublishOnly": "pnpm build"
+	},
 	"keywords": [
 		"astro-integration",
 		"astro-component",
@@ -28,5 +38,8 @@
 	},
 	"dependencies": {
 		"satori": "^0.18.3"
+	},
+	"devDependencies": {
+		"tsup": "^8.5.1"
 	}
 }
