@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.17.1",
+    "astro": "^5.17.2",
     "satori-astro": "workspace:*",
     "satori-html": "^0.3.2",
     "sharp": "^0.34.5",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
-    "@types/node": "^24.10.11",
+    "@types/node": "^24.10.13",
     "typescript": "^5.9.3"
   }
 }
