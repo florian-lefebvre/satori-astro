@@ -1,5 +1,11 @@
 # satori-astro
 
+## 0.4.0
+
+### Minor Changes
+
+- [#59](https://github.com/florian-lefebvre/satori-astro/pull/59) [`b6df199`](https://github.com/florian-lefebvre/satori-astro/commit/b6df199e6d105aa2064a3200daf8ce82ffe2f87d) Thanks [@renovate](https://github.com/apps/renovate)! - Adds support for Astro 6
+
 ## 0.3.3
 
 ### Patch Changes
