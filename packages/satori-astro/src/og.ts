@@ -13,13 +13,13 @@ export const satoriAstroOG = ({
 	template,
 }: SatoriAstroOGOptions) => {
 	return {
-		async toSvg(options: ToSvgOptions) {
+		async toSvg(options: ToSvgOptions): Promise<string> {
 			return await satori(template, { width, height, ...options });
 		},
 		async toImage({
 			satori: satoriOptions,
 			sharp: _sharpOptions,
-		}: ToImageOptions) {
+		}: ToImageOptions): Promise<Buffer<ArrayBufferLike>> {
 			const sharpOptions =
 				typeof _sharpOptions === "function"
 					? _sharpOptions({ width, height })
@@ -34,7 +34,7 @@ export const satoriAstroOG = ({
 
 			return pngBuffer;
 		},
-		async toResponse({ response: init, ...rest }: ToResponseOptions) {
+		async toResponse({ response: init, ...rest }: ToResponseOptions): Promise<Response> {
 			const image = await this.toImage(rest);
 
 			return new Response(image as Uint8Array<ArrayBuffer>, {

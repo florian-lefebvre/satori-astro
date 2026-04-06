@@ -1,10 +1,10 @@
 import type satori from "satori";
+import type { SatoriOptions } from "satori";
 import type { SharpOptions } from "sharp";
 
 type SatoriParameters = Parameters<typeof satori>;
-type SatoriOptions = SatoriParameters[1];
 
-export type SatoriAstroOGOptions = {
+export interface SatoriAstroOGOptions {
 	/**
 	 * The element passed to `satori`. If you don't use React, make sure
 	 * to have a look at https://github.com/natemoo-re/satori-html.
@@ -29,7 +29,7 @@ export type ToSvgOptions = Omit<SatoriOptions, "width" | "height">;
 /**
  * Options forwarded to satori and sharp.
  */
-export type ToImageOptions = {
+export interface ToImageOptions {
 	/**
 	 * Options forwarded to satori, except for `width` and `height` which
 	 * come from `satoriAstroOG`.
@@ -45,7 +45,7 @@ export type ToImageOptions = {
 		| ((params: { width: number; height: number }) => SharpOptions);
 };
 
-export type ToResponseOptions = ToImageOptions & {
+export interface ToResponseOptions extends ToImageOptions {
 	/**
 	 * You can alter the response returned by the function. Alternatively, get
 	 * the response and modify it before returning it from the endpoint.

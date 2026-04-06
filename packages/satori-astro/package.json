@@ -14,8 +14,8 @@
 		"dist"
 	],
 	"scripts": {
-		"dev": "tsup --watch",
-		"build": "tsup",
+		"dev": "tsc --build --watch",
+		"build": "tsc --build",
 		"prepublishOnly": "pnpm build"
 	},
 	"keywords": [
@@ -33,13 +33,13 @@
 	"homepage": "https://github.com/florian-lefebvre/satori-astro#readme",
 	"license": "MIT",
 	"peerDependencies": {
-		"astro": "^4.12.0 || ^5.0.0-beta.1",
+		"astro": "^4.12.0 || ^5.0.0 || ^6.0.0",
 		"sharp": ">=0.33.3 <1.0.0"
 	},
 	"dependencies": {
 		"satori": "^0.26.0"
 	},
 	"devDependencies": {
-		"tsup": "^8.5.1"
+		"typescript": "^6.0.2"
 	}
 }
