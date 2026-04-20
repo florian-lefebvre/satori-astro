@@ -40,6 +40,6 @@
 		"satori": "^0.26.0"
 	},
 	"devDependencies": {
-		"typescript": "^6.0.2"
+		"typescript": "^6.0.3"
 	}
 }
