@@ -1,5 +1,11 @@
 # satori-astro
 
+## 0.4.1
+
+### Patch Changes
+
+- [#72](https://github.com/florian-lefebvre/satori-astro/pull/72) [`f28e39b`](https://github.com/florian-lefebvre/satori-astro/commit/f28e39ba1080559bc3c25c00e1b8137821905dbd) Thanks [@StefKors](https://github.com/StefKors)! - Adds support for Astro 7
+
 ## 0.4.0
 
 ### Minor Changes
