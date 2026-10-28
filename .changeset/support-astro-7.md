@@ -1,5 +1,0 @@
----
-"satori-astro": patch
----
-
-Adds support for Astro 7
